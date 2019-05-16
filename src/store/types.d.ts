@@ -12,8 +12,12 @@ declare module 'MyTypes' {
   export type RootEpic = Epic<RootAction, RootAction, RootState, Services>;
 }
 
+
 declare module 'typesafe-actions' {
+  import * as MyTypes from "MyTypes";
+
   interface Types {
-    RootAction: ActionType<typeof import('./root-action').default>;
+    RootAction: MyTypes.RootAction;
   }
 }
+

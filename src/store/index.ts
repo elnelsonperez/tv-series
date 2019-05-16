@@ -6,7 +6,7 @@ import rootReducer from './root-reducer';
 import services from '../services';
 import {createEpicMiddleware} from "redux-observable";
 import { RootAction, RootState, Services } from 'MyTypes';
-// import rootEpic from './root-epic';
+import rootEpic from './root-epic';
 
 export const epicMiddleware = createEpicMiddleware<
   RootAction,
@@ -30,6 +30,6 @@ const store = createStore(
   enhancer
 );
 
-// epicMiddleware.run(rootEpic);
+epicMiddleware.run(rootEpic);
 
 export default store;

@@ -6,14 +6,14 @@
   display: grid;
   grid-template-rows: [header] auto [body] auto;
 
-  .header {
-    grid-column-end: 1;
-    grid-row-end: 1;
-  }
+  //.header {
+  //  grid-column-end: 1;
+  //  grid-row-end: 1;
+  //}
+  //
 
   .body {
-    grid-row-start: 1;
-    grid-row-end: auto;
+    padding: 1em 2em;
   }
 
 }

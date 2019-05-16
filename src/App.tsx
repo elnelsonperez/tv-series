@@ -20,4 +20,5 @@ const App: React.FC = () => {
   );
 }
 
+console.log(process.env.REACT_APP_API_URL)
 export default App;
