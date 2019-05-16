@@ -5,4 +5,4 @@ export const loadTopTvAsync = createAsyncAction(
     '[Top Movies] Request',
     '[Top Movies] Request Success',
     '[Top Movies] Request Failure'
-)<undefined, Models.TopRatedTvShow[], string>();
+)<undefined, Models.TvListObject[], string>();
