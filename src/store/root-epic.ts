@@ -1,5 +1,9 @@
 import { combineEpics } from 'redux-observable';
 
-import * as topTvEpics from '../features/top-tv/epics';
+import * as topTv from '../features/top-tv/epics';
+import * as configuration from '../features/configuration/epics';
 
-export default combineEpics(...Object.values(topTvEpics));
+export default combineEpics(
+    ...Object.values(topTv),
+    ...Object.values(configuration),
+    );
