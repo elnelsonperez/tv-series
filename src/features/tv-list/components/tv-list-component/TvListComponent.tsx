@@ -8,6 +8,7 @@ export type TvListProps = {
 }
 
 export const TvListComponent: React.FC<TvListProps> = props => {
+    console.log(props)
     const tvShowsList = props.tvList.map((tvShow, index) =>
         <div key={index} className={'tv-list-item'}>
             <TvShowCard tvShow={tvShow}/>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Card, Elevation, Icon} from "@blueprintjs/core";
 import {TvListObject} from "Models";
-import ConfigContext from '../../../shared/context/config-context';
+import {ConfigContext} from '../../../shared/context/config-context';
 
 type Props = {
     tvShow: TvListObject

@@ -5,12 +5,11 @@ import {loadTopTvAsync} from "../actions";
 import {useEffect} from "react";
 import {connect} from "react-redux";
 import {Spinner} from '@blueprintjs/core'
-import ConfigContext from "../../../shared/context/config-context";
+import {withConfigContext} from "../../../shared/context/config-context";
 
 const mapStateToProps = (state: RootState) => ({
     loading: state.tv.topTv.isLoading,
-    tvShowsData: state.tv.topTv.topTvShows,
-    configuration: state.configuration.data
+    tvShowsData: state.tv.topTv.topTvShows
 });
 
 const dispatchProps = {
@@ -28,14 +27,13 @@ const TopTvShowsComponent: React.FC<Props> = props => {
     }, [])
 
     return (
-        props.loading ? <Spinner intent={"primary"} /> :
-            <ConfigContext.Provider value={props.configuration}>
-                <TvListComponent tvList={props.tvShowsData} />
-            </ConfigContext.Provider>
+        props.loading ? <Spinner intent={"primary"} /> : <TvListComponent tvList={props.tvShowsData} />
     )
 }
 
-export default connect(
+const ConnectedTopTvShowsComponent = connect(
     mapStateToProps,
     dispatchProps
-)(TopTvShowsComponent)
+)(TopTvShowsComponent);
+
+export default withConfigContext(ConnectedTopTvShowsComponent);
