@@ -1,9 +1,9 @@
 .tv-list-item {
-  height: 300px;
   margin-right: 10px;
 }
-
 .tv-list-wrapper {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
 }

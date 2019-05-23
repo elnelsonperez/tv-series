@@ -4,7 +4,7 @@ import TopTvShowsComponent from '../features/top-tv/components/TopTvShowsCompone
 
 export default () => (
     <Main>
-        <h1>Home Component</h1>
+        <h1>Top TV Series</h1>
         <TopTvShowsComponent />
     </Main>
 );
