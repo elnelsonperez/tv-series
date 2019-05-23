@@ -2,10 +2,9 @@ import http from '../../services/http-client'
 import * as Models from "Models";
 import {Observable} from 'rxjs'
 import {map} from 'rxjs/operators'
-import {Configuration} from "Models";
 
-export function loadConfiguration (): Observable<Models.Configuration> {
-    return http.get<Configuration>('configuration').pipe(
+export function loadTvShowDetails (id: string): Observable<Models.TvShowDetailObject> {
+    return http.get<Models.TvShowDetailObject>('tv/' + id ).pipe(
         map(result => {
             return result.data;
         })

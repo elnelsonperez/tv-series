@@ -1,6 +1,6 @@
-import axios from 'axios'
+import Axios from 'axios-observable'
 
-const instance = axios.create({
+const instance = Axios.create({
     baseURL: process.env.REACT_APP_API_URL
 });
 instance.defaults.params = {}

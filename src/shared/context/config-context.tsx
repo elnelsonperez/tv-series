@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 export const ConfigContext = React.createContext<Models.Configuration | null>(null);
 
-export const withConfigContext = <BaseProps extends {}>(_BaseComponent: React.ComponentType<BaseProps>) => {
+export const withConfigContextProvider = <BaseProps extends {}>(_BaseComponent: React.ComponentType<BaseProps>) => {
 
     const BaseComponent = _BaseComponent as React.ComponentType<{}>;
 

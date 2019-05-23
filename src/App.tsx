@@ -8,14 +8,21 @@ import {loadConfigurationAsync} from "./features/configuration/actions";
 
 //Routes
 import Home from "./routes/Home";
+import TvDetails from "./routes/TvDetails";
+import {withConfigContextProvider} from "./shared/context/config-context";
+
+const SwitchWithConfig = withConfigContextProvider(Switch);
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <Switch>
+        <SwitchWithConfig>
           <Route exact path={getPath('home')} render={Home} />
-        </Switch>
+          <Route exact
+                 path={getPath('tvShowDetails', ':tvShowId')}
+                 render={props => <TvDetails {...props}/>} />
+        </SwitchWithConfig>
       </ConnectedRouter>
     </Provider>
   );

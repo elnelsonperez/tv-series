@@ -4,8 +4,9 @@ import {RootState} from 'MyTypes'
 import {loadTopTvAsync} from "../actions";
 import {useEffect} from "react";
 import {connect} from "react-redux";
+import {isEmpty} from "lodash";
 import {Spinner} from '@blueprintjs/core'
-import {withConfigContext} from "../../../shared/context/config-context";
+import {withConfigContextProvider} from "../../../shared/context/config-context";
 
 const mapStateToProps = (state: RootState) => ({
     loading: state.tv.topTv.isLoading,
@@ -22,7 +23,8 @@ const TopTvShowsComponent: React.FC<Props> = props => {
 
     //Equivalent to componentDidMount
     useEffect(() => {
-        props.loadTopTvShows()
+        if (isEmpty(props.tvShowsData))
+            props.loadTopTvShows()
         // eslint-disable-next-line
     }, [])
 
@@ -36,4 +38,4 @@ const ConnectedTopTvShowsComponent = connect(
     dispatchProps
 )(TopTvShowsComponent);
 
-export default withConfigContext(ConnectedTopTvShowsComponent);
+export default withConfigContextProvider(ConnectedTopTvShowsComponent);
