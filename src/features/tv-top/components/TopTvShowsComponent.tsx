@@ -10,7 +10,7 @@ import {withConfigContextProvider} from "../../../shared/context/config-context"
 
 const mapStateToProps = (state: RootState) => ({
     loading: state.tv.topTv.isLoading,
-    tvShowsData: state.tv.topTv.topTvShows
+    tvShowsData: state.tv.topTv.topTvShows.slice(0,7)
 });
 
 const dispatchProps = {

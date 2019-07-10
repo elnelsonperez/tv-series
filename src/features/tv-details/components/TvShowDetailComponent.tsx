@@ -42,7 +42,6 @@ export const TvShowDetailsComponent: React.FC<Props> = (props) => {
 
                     </div>: false}
                 </ConfigContext.Consumer>
-
             </div>
         )
     }

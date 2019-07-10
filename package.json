@@ -25,6 +25,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-observable": "^1.1.0",
+    "rxjs-hooks": "^0.4.3",
     "typesafe-actions": "^4.2.1",
     "typescript": "3.4.5",
     "utility-types": "^3.7.0"
