@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from '../layouts/Main';
+import MainLayout from '../layouts/Main';
 import TopTvShowsComponent from '../features/tv-top/components/TopTvShowsComponent'
 import {SearchType} from "../shared/api/enums";
 import {GenericSearchComponent} from "../features/search/components/GenericSearchComponent";
@@ -8,7 +8,7 @@ import {MovieListObject, TvListObject} from "Models";
 export default () => {
 
     return (
-        <Main>
+        <MainLayout>
             <h1>Search TV</h1>
             <GenericSearchComponent<TvListObject> searchType={SearchType.TV}>
                 { (state) => <div>Test<br/>
@@ -29,7 +29,7 @@ export default () => {
 
             <h1>Top TV Series</h1>
             <TopTvShowsComponent />
-        </Main>
+        </MainLayout>
     );
 }
 
