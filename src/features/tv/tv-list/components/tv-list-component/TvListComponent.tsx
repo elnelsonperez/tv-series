@@ -1,8 +1,8 @@
 import * as React from "react";
 import {TvListObject} from "Models";
-import {TvShowCard} from "../tv-card/TvShowCard";
+import {TvShowCard} from "../../../components/tv-card/TvShowCard";
 import styles from './TvListComponent.module.scss'
-import {PosterSizes} from "../../../../shared/api/enums";
+import {PosterSizes} from "../../../../../shared/api/enums";
 
 export type TvListProps = {
     tvList: TvListObject[]

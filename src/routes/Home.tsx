@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../layouts/Main';
-import TopTvShowsComponent from '../features/tv-top/components/TopTvShowsComponent'
+import TopTvShowsComponent from '../features/tv/tv-top/components/TopTvShowsComponent'
 import {TvSearchCompontent} from "../features/search/components/TvSearchComponent";
 
 export default () => {

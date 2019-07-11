@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../layouts/Main';
-import {TvShowDetailsComponent} from "../features/tv-details/components/TvShowDetailComponent";
+import {TvShowDetailsComponent} from "../features/tv/tv-details/components/TvShowDetailComponent";
 import {match} from "react-router";
 
 interface Props {

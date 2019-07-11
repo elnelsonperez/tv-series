@@ -1,19 +1,19 @@
 import * as React from "react";
-import {TvListObject} from "Models";
+import {HasPosterPath} from "Models";
 import {PosterSizes} from "../../../../shared/api/enums";
 
 type Props = {
     baseUrl: string;
-    tvShow: TvListObject;
+    entityWithPoster: HasPosterPath;
     size?: PosterSizes
 }
 
 const PosterImage: React.FC<Props> = (props) => {
     const size = props.size ? props.size : PosterSizes.SMALL;
 
-    if (props.tvShow.poster_path) {
+    if (props.entityWithPoster.poster_path) {
         return (
-            <img src={props.baseUrl+size+'/'+props.tvShow.poster_path} alt={'Poster'}/>
+            <img src={props.baseUrl+size+'/'+props.entityWithPoster.poster_path} alt={'Poster'}/>
         )
     }
     return <div>

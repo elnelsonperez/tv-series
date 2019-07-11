@@ -41,17 +41,16 @@ declare module 'Models' {
         origin_country: string;
     }
 
-     interface Season {
+     interface Season extends HasPosterPath {
         air_date: string;
         episode_count: number;
         id: number;
         name: string;
         overview: string;
-        poster_path: string;
         season_number: number;
     }
 
-    export interface TvShowDetailObject {
+    export interface TvShowDetailObject extends HasPosterPath {
         backdrop_path: string;
         created_by: CreatedBy[];
         episode_run_time: number[];
@@ -73,7 +72,6 @@ declare module 'Models' {
         original_name: string;
         overview: string;
         popularity: number;
-        poster_path: string;
         production_companies: ProductionCompany[];
         seasons: Season[];
         status: string;

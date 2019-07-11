@@ -24,7 +24,7 @@ declare module 'Models' {
         change_keys: string[];
     }
 
-    export interface TvListObject {
+    export interface TvListObject extends  HasPosterPath{
         original_name: string;
         genre_ids: number[];
         name: string;
@@ -37,11 +37,9 @@ declare module 'Models' {
         id: number;
         vote_average: number;
         overview: string;
-        poster_path: string;
     }
     
-    export interface MovieListObject {
-        poster_path: string;
+    export interface MovieListObject  extends  HasPosterPath{
         adult: boolean;
         overview: string;
         release_date: string;
@@ -56,5 +54,10 @@ declare module 'Models' {
         video: boolean;
         vote_average: number;
     }
+
+    export interface HasPosterPath {
+        poster_path: string;
+    }
+
 }
 

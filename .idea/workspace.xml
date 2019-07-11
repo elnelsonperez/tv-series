@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded284ed-8d6e-46ab-89aa-457116d1d871" name="Default Changelist" comment="Generic search component">
-      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/search/components/TvSearchComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/search/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/search/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/search/components/GenericSearchComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/search/components/GenericSearchComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/tv-list/components/TvShowCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/enums.ts" afterDir="false" />
+    <list default="true" id="ded284ed-8d6e-46ab-89aa-457116d1d871" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/tv-details/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-details/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/models/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/models/types.d.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,18 +37,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.tsx">
+        <entry file="file://$PROJECT_DIR$/src/shared/models/types.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="54" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="312">
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -65,6 +53,39 @@
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/features/tv-details/types.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1032">
+              <caret line="43" column="43" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -81,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+            <state relative-caret-position="192">
+              <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -93,38 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/shared/api/enums.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="192">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -152,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/store/index.ts" />
         <option value="$PROJECT_DIR$/src/store/types.d.ts" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/features/top-tv/types.d.ts" />
@@ -173,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/shared/context/ConfigContext.ts" />
         <option value="$PROJECT_DIR$/src/shared/context/config-context.ts" />
         <option value="$PROJECT_DIR$/src/features/tv-details/types.d..ts" />
-        <option value="$PROJECT_DIR$/src/features/tv-details/types.d.ts" />
         <option value="$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.ts" />
         <option value="$PROJECT_DIR$/src/routes/TvDetails.tsx" />
         <option value="$PROJECT_DIR$/src/router-paths.ts" />
@@ -189,8 +178,6 @@
         <option value="$PROJECT_DIR$/src/features/top-tv/components/TopTvShowsComponent.tsx" />
         <option value="$PROJECT_DIR$/src/features/search/types.d.ts" />
         <option value="$PROJECT_DIR$/src/features/search/api.ts" />
-        <option value="$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx" />
-        <option value="$PROJECT_DIR$/src/shared/models/types.d.ts" />
         <option value="$PROJECT_DIR$/src/routes/Home.tsx" />
         <option value="$PROJECT_DIR$/src/features/search/components/TvSearchComponent.tsx" />
         <option value="$PROJECT_DIR$/src/features/search/components/GenericSearchComponent.tsx" />
@@ -200,9 +187,13 @@
         <option value="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.module.scss" />
         <option value="$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.tsx" />
         <option value="$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.tsx" />
-        <option value="$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss" />
         <option value="$PROJECT_DIR$/src/App.scss" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
+        <option value="$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss" />
+        <option value="$PROJECT_DIR$/src/features/tv-details/types.d.ts" />
+        <option value="$PROJECT_DIR$/src/shared/models/types.d.ts" />
+        <option value="$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx" />
+        <option value="$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx" />
       </list>
     </option>
   </component>
@@ -238,6 +229,25 @@
               <item name="tv-series" type="b2602c69:ProjectViewProjectNode" />
               <item name="tv-series" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tv-series" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tv-series" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tv-series" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tv-series" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tv-series" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tv-series" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -318,7 +328,7 @@
       <workItem from="1562613653257" duration="615000" />
       <workItem from="1562780654694" duration="7106000" />
       <workItem from="1562787975373" duration="372000" />
-      <workItem from="1562857132162" duration="4368000" />
+      <workItem from="1562857132162" duration="4967000" />
     </task>
     <task id="LOCAL-00001" summary="TopTv Done">
       <created>1558036152682</created>
@@ -397,15 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562788227503</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CSS Modules and Adjustments">
+      <created>1562861687150</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562861687150</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78436000" />
+    <option name="totallyTimeSpent" value="79035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="27" width="1869" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2898158" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -463,7 +479,8 @@
     <MESSAGE value="Hooks and router" />
     <MESSAGE value="Seasons" />
     <MESSAGE value="Generic search component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generic search component" />
+    <MESSAGE value="CSS Modules and Adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS Modules and Adjustments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/features/configuration/reducer.ts">
@@ -553,13 +570,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-details/types.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -729,16 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/search/api.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -756,13 +756,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/models/types.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -806,16 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/shared/api/enums.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -830,30 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -887,6 +846,64 @@
           <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-list-component/TvListComponent.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/tv-card/TvShowCard.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/models/types.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-details/types.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-list/components/poster-image/PosterImage.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/tv-details/components/TvShowDetailComponent.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>

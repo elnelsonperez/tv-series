@@ -2,7 +2,8 @@ import {useEffect, useState} from "react";
 import {loadTvShowDetails} from "../api";
 import * as React from "react";
 import * as Models from "Models";
-import {ConfigContext} from "../../../shared/context/config-context";
+import {ConfigContext} from "../../../../shared/context/config-context";
+import PosterImage from "../../components/poster-image/PosterImage";
 
 interface Props {
     tvShowId: string;
@@ -28,18 +29,16 @@ export const TvShowDetailsComponent: React.FC<Props> = (props) => {
                         <img src={config.images.base_url+'w300/'+ details.poster_path} alt={'Poster'}/>
                         <p>{details.overview}</p>
 
-                        <h4>Seasons</h4>
+                        <h3>Seasons</h3>
                         <div style={{display: "flex"}}>
                             {
-                                details.seasons.map(s => {
-                                    return <div style={{display: "inline-block", marginRight: '15px'}} key={s.id}><h6>{s.name}</h6>
-                                        <img src={config.images.base_url+'w154/'+ s.poster_path} alt={'Poster'}/>
+                                details.seasons.map(season => {
+                                    return <div style={{display: "inline-block", marginRight: '15px'}} key={season.id}><h4>{season.name}</h4>
+                                        <PosterImage baseUrl={config.images.base_url} entityWithPoster={season}/>
                                     </div>
                                 })
                             }
                         </div>
-
-
                     </div>: false}
                 </ConfigContext.Consumer>
             </div>

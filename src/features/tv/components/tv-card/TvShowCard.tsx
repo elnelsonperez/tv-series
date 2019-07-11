@@ -34,7 +34,7 @@ const TvCard: React.FC<Props> = props => {
                         {tvShow.name}
                     </div>
                     <div className={styles.image}>
-                        <PosterImage size={posterSize} tvShow={tvShow} baseUrl={config.images.base_url}/>
+                        <PosterImage size={posterSize} entityWithPoster={tvShow} baseUrl={config.images.base_url}/>
                     </div>
                 </div>
             </Card> : false

@@ -6,7 +6,7 @@ import {useEffect} from "react";
 import {connect} from "react-redux";
 import {isEmpty} from "lodash";
 import {Spinner} from '@blueprintjs/core'
-import {withConfigContextProvider} from "../../../shared/context/config-context";
+import {withConfigContextProvider} from "../../../../shared/context/config-context";
 
 const mapStateToProps = (state: RootState) => ({
     loading: state.tv.topTv.isLoading,
