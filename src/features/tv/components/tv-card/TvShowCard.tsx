@@ -8,7 +8,6 @@ import PosterImage from "../poster-image/PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
-import {useSelector} from "react-redux";
 import {useStoreSelector} from "../../../../shared/hooks/useStoreSelector";
 
 type Props = RouteComponentProps & {

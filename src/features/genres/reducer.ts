@@ -2,8 +2,6 @@ import {fetchMovieGenresAction, fetchTvGenresAction} from './actions'
 import {combineReducers} from "redux";
 import {createReducer} from "typesafe-actions";
 import {Genre} from "Models";
-import {merge} from 'lodash'
-import {keys} from 'lodash'
 import {convertToEntityState, EntityState, getDefaults} from "../../store/helpers";
 
 const tvReducer = combineReducers({
