@@ -1,17 +1,17 @@
-import {loadTopTvAsync} from "./actions";
-import { RootEpic } from 'MyTypes';
+import {fetchTopTvAction} from "./actions";
+import { RootEpic } from 'GlobalTypes';
 import {isActionOf} from "typesafe-actions";
 import { of } from 'rxjs';
 import { filter, switchMap, map, catchError } from 'rxjs/operators';
 
 export const loadTopTvEpic: RootEpic = (action$, state$, { api }) => {
     return action$.pipe(
-        filter(isActionOf(loadTopTvAsync.request)),
+        filter(isActionOf(fetchTopTvAction.request)),
         switchMap(() => {
-            return api.topTv.loadTopTvShows().pipe(
-                map(loadTopTvAsync.success),
+            return api.topTv.getTopTvShows().pipe(
+                map(fetchTopTvAction.success),
                 catchError(error => {
-                    return of(loadTopTvAsync.failure(error.response))
+                    return of(fetchTopTvAction.failure(error.response))
                 })
             )}
         )

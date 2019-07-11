@@ -11,19 +11,6 @@ declare module 'Models' {
         status_message: string;
     }
 
-    export interface Configuration {
-        images: {
-            base_url: string;
-            secure_base_url: string;
-            backdrop_sizes: string[];
-            logo_sizes: string[];
-            poster_sizes: string[];
-            profile_sizes: string[];
-            still_sizes: string[];
-        };
-        change_keys: string[];
-    }
-
     export interface TvListObject extends  HasPosterPath{
         original_name: string;
         genre_ids: number[];

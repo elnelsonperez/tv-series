@@ -1,35 +1,40 @@
 import React from 'react';
-import { Provider } from 'react-redux'
 import store, {history} from "./store";
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router';
 import {getPath} from "./router-paths";
-import {loadConfigurationAsync} from "./features/configuration/actions";
 import './App.scss'
 
 //Routes
 import Home from "./routes/Home";
 import TvDetails from "./routes/TvDetails";
-import {withConfigContextProvider} from "./shared/context/config-context";
+import {Provider} from "react-redux";
+import {ConfigContext} from "./shared/hooks/config-context";
+import {Configuration} from "Models";
+import {useStoreSelector} from "./shared/hooks/useStoreSelector";
 
-const SwitchWithConfig = withConfigContextProvider(Switch);
-
-const App: React.FC = () => {
-  return (
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <SwitchWithConfig>
-          <Route exact path={getPath('home')} render={Home} />
-          <Route exact
-                 path={getPath('tvShowDetails', ':tvShowId')}
-                 render={props => <TvDetails {...props}/>} />
-        </SwitchWithConfig>
-      </ConnectedRouter>
-    </Provider>
-  );
+const AppWithConfig = () => {
+    const configuration = useStoreSelector<Configuration>(state => state.configuration.data)
+    return (
+        <ConfigContext.Provider value={configuration}>
+            <Route exact path={getPath('home')} render={Home} />
+            <Route exact
+                   path={getPath('tvShowDetails', ':tvShowId')}
+                   render={props => <TvDetails {...props}/>} />
+        </ConfigContext.Provider>
+    )
 }
 
-//Every component needs this
-store.dispatch(loadConfigurationAsync.request())
+const App: React.FC = () => {
+    return (
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
+                <Switch>
+                    <AppWithConfig/>
+                </Switch>
+            </ConnectedRouter>
+        </Provider>
+    );
+}
 
 export default App;

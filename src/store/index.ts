@@ -5,7 +5,7 @@ import {createBrowserHistory} from "history";
 import rootReducer from './root-reducer';
 import services from '../services';
 import {createEpicMiddleware} from "redux-observable";
-import { RootAction, RootState, Services } from 'MyTypes';
+import { RootAction, RootState, Services } from 'GlobalTypes';
 import rootEpic from './root-epic';
 
 export const epicMiddleware = createEpicMiddleware<

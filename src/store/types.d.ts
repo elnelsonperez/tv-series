@@ -1,8 +1,8 @@
 import { StateType, ActionType } from 'typesafe-actions';
 import { Epic } from 'redux-observable';
-import {Services} from "MyTypes";
+import {Services} from "GlobalTypes";
 
-declare module 'MyTypes' {
+declare module 'GlobalTypes' {
   export type Store = StateType<typeof import('./index').default>;
   export type RootState = StateType<
     ReturnType<typeof import('./root-reducer').default>
@@ -14,10 +14,10 @@ declare module 'MyTypes' {
 
 
 declare module 'typesafe-actions' {
-  import * as MyTypes from "MyTypes";
+  import * as GlobalTypes from "GlobalTypes";
 
   interface Types {
-    RootAction: MyTypes.RootAction;
+    RootAction: GlobalTypes.RootAction;
   }
 }
 

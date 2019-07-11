@@ -4,7 +4,7 @@ import {Observable} from 'rxjs'
 import {map} from 'rxjs/operators'
 import {TvListObject} from "Models";
 
-export function loadTopTvShows (): Observable<Models.TvListObject[]> {
+export function getTopTvShows (): Observable<Models.TvListObject[]> {
     return http.get<Models.Response<TvListObject[]>>('tv/top_rated').pipe(
         map(result => {
             return result.data.results;

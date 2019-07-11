@@ -1,14 +1,14 @@
-import {loadConfigurationAsync} from './actions'
+import {fetchConfigurationAction} from './actions'
 import {combineReducers} from "redux";
 import {createReducer} from "typesafe-actions";
 import {Configuration} from "Models";
 
 const reducer = combineReducers({
     isLoading: createReducer(false as boolean)
-        .handleAction(loadConfigurationAsync.request, (state, action) => true)
-        .handleAction([loadConfigurationAsync.failure, loadConfigurationAsync.success], (state, action) => false),
+        .handleAction(fetchConfigurationAction.request, (state, action) => true)
+        .handleAction([fetchConfigurationAction.failure, fetchConfigurationAction.success], (state, action) => false),
     data: createReducer({} as Configuration)
-        .handleAction(loadConfigurationAsync.success, (state, action) => action.payload)
+        .handleAction(fetchConfigurationAction.success, (state, action) => action.payload)
 });
 
 export default reducer;

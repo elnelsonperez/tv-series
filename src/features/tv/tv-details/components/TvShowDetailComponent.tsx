@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {loadTvShowDetails} from "../api";
 import * as React from "react";
 import * as Models from "Models";
-import {ConfigContext} from "../../../../shared/context/config-context";
+import {ConfigContext} from "../../../../shared/hooks/config-context";
 import PosterImage from "../../components/poster-image/PosterImage";
 
 interface Props {

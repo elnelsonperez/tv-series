@@ -4,12 +4,12 @@ import {Observable, of} from 'rxjs';
 import {debounceTime, tap, switchMap, map} from 'rxjs/operators';
 import {InputGroup} from "@blueprintjs/core";
 import {getSearchResults} from "../api";
-import {SearchEndpoints} from "../../../shared/api/enums";
+import {ResourceType} from "../../../shared/api/enums";
 import {useEventCallback} from "rxjs-hooks";
 
 interface Props<V> {
     children: (state: V[]) => React.ReactNode,
-    endpoint: SearchEndpoints,
+    endpoint: ResourceType,
 
 }
 

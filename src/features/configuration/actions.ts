@@ -2,7 +2,7 @@ import { createAsyncAction } from 'typesafe-actions';
 import * as Models from "Models";
 import {AxiosResponse} from "axios";
 
-export const loadConfigurationAsync = createAsyncAction(
+export const fetchConfigurationAction = createAsyncAction(
     '[Configuration] Request',
     '[Configuration] Request Success',
     '[Configuration] Request Failure'
