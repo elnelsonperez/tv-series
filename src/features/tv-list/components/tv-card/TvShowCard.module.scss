@@ -1,0 +1,15 @@
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .image {
+
+  }
+}
+

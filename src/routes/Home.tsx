@@ -1,32 +1,14 @@
 import React from 'react';
 import MainLayout from '../layouts/Main';
 import TopTvShowsComponent from '../features/tv-top/components/TopTvShowsComponent'
-import {SearchType} from "../shared/api/enums";
-import {GenericSearchComponent} from "../features/search/components/GenericSearchComponent";
-import {MovieListObject, TvListObject} from "Models";
+import {TvSearchCompontent} from "../features/search/components/TvSearchComponent";
 
 export default () => {
 
     return (
         <MainLayout>
-            <h1>Search TV</h1>
-            <GenericSearchComponent<TvListObject> searchType={SearchType.TV}>
-                { (state) => <div>Test<br/>
-                    <ul>
-                        {state.map(item => <li key={item.id}> {item.id} -  {item.name} - {item.vote_average}</li>)}
-                    </ul>
-                </div>}
-            </GenericSearchComponent>
-
-            <h1>Search Movies</h1>
-            <GenericSearchComponent<MovieListObject> searchType={SearchType.MOVIES}>
-                { (state) => <div>Test<br/>
-                    <ul>
-                        {state.map(item => <li key={item.id}> {item.id} -  {item.title} - {item.vote_average}</li>)}
-                    </ul>
-                </div>}
-            </GenericSearchComponent>
-
+            <h1>Search TV Series</h1>
+            <TvSearchCompontent/>
             <h1>Top TV Series</h1>
             <TopTvShowsComponent />
         </MainLayout>

@@ -5,6 +5,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router';
 import {getPath} from "./router-paths";
 import {loadConfigurationAsync} from "./features/configuration/actions";
+import './App.scss'
 
 //Routes
 import Home from "./routes/Home";

@@ -1,4 +1,11 @@
-export enum SearchType {
+export enum SearchEndpoints {
     TV = 'tv',
     MOVIES = 'movie',
+}
+
+export enum PosterSizes {
+   SMALL = "w185",
+   MEDIUM = "w342",
+   LARGE = "w780",
+   ORIGINAL = "original"
 }
