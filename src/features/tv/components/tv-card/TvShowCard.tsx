@@ -1,6 +1,6 @@
 import * as React from "react";
-import {Card, Elevation} from "@blueprintjs/core";
-import {TvListObject} from "Models";
+import {Card, Elevation, Tag} from "@blueprintjs/core";
+import {Genre, TvListObject} from "Models";
 import {ConfigContext} from '../../../../shared/hooks/config-context';
 import {RouteComponentProps, withRouter} from "react-router";
 import {getPath} from "../../../../router-paths";
@@ -8,6 +8,8 @@ import PosterImage from "../poster-image/PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
+import {useSelector} from "react-redux";
+import {useStoreSelector} from "../../../../shared/hooks/useStoreSelector";
 
 type Props = RouteComponentProps & {
     tvShow: TvListObject;
@@ -27,6 +29,14 @@ const TvCard: React.FC<Props> = props => {
     }
 
     const config = useContext(ConfigContext);
+    const genresById = useStoreSelector(state => state.genres.data.tv.byId);
+
+    let genres: Genre[] = [];
+    if (genresById) {
+        genres = tvShow.genre_ids
+            .map(id => genresById[id] ? genresById[id] : null)
+            .filter(i => i !== null) as Genre[]
+    }
 
     if (config) {
         return <Card interactive={true} elevation={Elevation.ONE} onClick={handleClick}
@@ -38,8 +48,8 @@ const TvCard: React.FC<Props> = props => {
                 <div className={styles.image}>
                     <PosterImage size={posterSize} entityWithPoster={tvShow} baseUrl={config.images.base_url}/>
                 </div>
-                <div className={styles.detail}>
-                    {}
+                <div className={styles.categories}>
+                    {genres ? genres.map(g => <Tag style={{marginRight: 5}}>{g.name}</Tag>) : ''}
                 </div>
             </div>
         </Card>
