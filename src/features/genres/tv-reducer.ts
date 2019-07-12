@@ -1,7 +1,7 @@
 import {fetchTvGenresAction} from './actions'
 import {combineReducers} from "redux";
 import {createReducer} from "typesafe-actions";
-import {Genre} from "Models";
+import {Genre} from "./models";
 
 const tvReducer = combineReducers({
     isLoading: createReducer(false as boolean)

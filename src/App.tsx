@@ -1,19 +1,29 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import store, {history} from "./store";
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router';
 import {getPath} from "./router-paths";
-import './App.scss'
 
 //Routes
 import Home from "./routes/Home";
 import TvDetails from "./routes/TvDetails";
-import {Provider} from "react-redux";
+import {Provider, useDispatch} from "react-redux";
 import {ConfigContext} from "./shared/hooks/config-context";
-import {Configuration} from "Models";
 import {useStoreSelector} from "./shared/hooks/useStoreSelector";
+import {fetchConfigurationAction} from "./features/configuration/actions";
+import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/actions";
+import {Configuration} from "./features/configuration/models";
 
 const AppWithConfig = () => {
+
+    const dispatch = useDispatch()
+    useEffect(() => {
+        //Every component needs this
+        dispatch(fetchConfigurationAction.request())
+        dispatch(fetchTvGenresAction.request())
+        dispatch(fetchMovieGenresAction.request())
+    }, [dispatch])
+
     const configuration = useStoreSelector<Configuration>(state => state.configuration.data)
     return (
         <ConfigContext.Provider value={configuration}>

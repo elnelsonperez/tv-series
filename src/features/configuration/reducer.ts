@@ -1,7 +1,7 @@
 import {fetchConfigurationAction} from './actions'
 import {combineReducers} from "redux";
 import {createReducer} from "typesafe-actions";
-import {Configuration} from "Models";
+import {Configuration} from "./models";
 
 const reducer = combineReducers({
     isLoading: createReducer(false as boolean)

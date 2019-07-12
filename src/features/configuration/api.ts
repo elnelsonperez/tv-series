@@ -1,10 +1,9 @@
 import http from '../../services/http-client'
-import * as Models from "Models";
 import {Observable} from 'rxjs'
 import {map} from 'rxjs/operators'
-import {Configuration} from "Models";
+import {Configuration} from "./models";
 
-export function loadConfiguration (): Observable<Models.Configuration> {
+export function loadConfiguration (): Observable<Configuration> {
     return http.get<Configuration>('configuration').pipe(
         map(result => {
             return result.data;

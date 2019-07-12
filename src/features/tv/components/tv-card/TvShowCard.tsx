@@ -1,6 +1,5 @@
 import * as React from "react";
 import {Card, Elevation, Tag} from "@blueprintjs/core";
-import {Genre, TvListObject} from "Models";
 import {ConfigContext} from '../../../../shared/hooks/config-context';
 import {RouteComponentProps, withRouter} from "react-router";
 import {getPath} from "../../../../router-paths";
@@ -9,9 +8,11 @@ import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
 import {useStoreSelector} from "../../../../shared/hooks/useStoreSelector";
+import {Genre} from "../../../genres/models";
+import {ListObject} from "../../models";
 
 type Props = RouteComponentProps & {
-    tvShow: TvListObject;
+    tvShow: ListObject;
     posterSize: PosterSizes
 }
 
@@ -48,7 +49,7 @@ const TvCard: React.FC<Props> = props => {
                     <PosterImage size={posterSize} entityWithPoster={tvShow} baseUrl={config.images.base_url}/>
                 </div>
                 <div className={styles.categories}>
-                    {genres ? genres.map(g => <Tag style={{marginRight: 5}}>{g.name}</Tag>) : ''}
+                    {genres ? genres.map(g => <Tag key={g.id} style={{marginRight: 5}}>{g.name}</Tag>) : ''}
                 </div>
             </div>
         </Card>

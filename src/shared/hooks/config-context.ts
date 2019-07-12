@@ -1,4 +1,4 @@
 import React from "react";
-import * as Models from "Models";
+import {Configuration} from "../../features/configuration/models";
 
-export const ConfigContext = React.createContext<Models.Configuration | null>(null);
+export const ConfigContext = React.createContext<Configuration | null>(null);

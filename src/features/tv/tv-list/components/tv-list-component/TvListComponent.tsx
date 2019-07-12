@@ -1,11 +1,11 @@
 import * as React from "react";
-import {TvListObject} from "Models";
 import {TvShowCard} from "../../../components/tv-card/TvShowCard";
 import styles from './TvListComponent.module.scss'
 import {PosterSizes} from "../../../../../shared/api/enums";
+import {ListObject} from "../../../models";
 
 export type TvListProps = {
-    tvList: TvListObject[]
+    tvList: ListObject[]
 }
 
 export const TvListComponent: React.FC<TvListProps> = props => {
