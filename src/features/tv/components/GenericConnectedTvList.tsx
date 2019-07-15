@@ -18,7 +18,7 @@ interface Props {
 
 const GenericConnectedTvList: React.FC<Props> = (props) => {
     const {quantity, tvListType} = props;
-    const loading = useSelector<RootState, boolean>((state: any) => state.tv[tvListType].data.isLoading)
+    const loading = useSelector<RootState, boolean>((state: any) => state.tv[tvListType].isLoading)
     const tvList = useSelector<RootState, TvListObject[]>((state: any) => state.tv[tvListType].data.slice(0,quantity ? quantity : 7))
     const dispatch = useDispatch()
 
