@@ -3,16 +3,16 @@ import {Card, Elevation, Tag} from "@blueprintjs/core";
 import {ConfigContext} from '../../../../shared/hooks/config-context';
 import {RouteComponentProps, withRouter} from "react-router";
 import {getPath} from "../../../../router-paths";
-import PosterImage from "../poster-image/PosterImage";
+import PosterImage from "../PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
 import {useStoreSelector} from "../../../../shared/hooks/use-store-selector";
 import {Genre} from "../../../genres/models";
-import {ListObject} from "../../models";
+import {TvListObject} from "../../models";
 
 type Props = RouteComponentProps & {
-    tvShow: ListObject;
+    tvShow: TvListObject;
     posterSize: PosterSizes
 }
 

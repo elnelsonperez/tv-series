@@ -38,12 +38,10 @@ const GenericSearchComponent = <ReturnType extends {}>(props: PropsWithChildren<
     return (
         <div className='search-wrapper'>
             <InputGroup leftIcon={'search'} placeholder='Type here to search' onInput={(e: ChangeEvent<HTMLInputElement>) => searchTextCallback(e.target.value)} />
-            {props.children(useObsRender(list$, []))}
-
             {count > 0 && <div>
                 {count} Results
             </div>}
-
+            {props.children(useObsRender(list$, []))}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import {loadTvShowDetails} from "../api";
 import * as React from "react";
 import {ConfigContext} from "../../../../shared/hooks/config-context";
-import PosterImage from "../../components/poster-image/PosterImage";
+import PosterImage from "../../components/PosterImage";
 import {isEmpty} from 'lodash';
 import {DetailObject} from "../../models";
 

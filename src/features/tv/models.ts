@@ -1,14 +1,14 @@
 import {HasPosterPath} from "../../shared/models";
 import {Genre} from "../genres/models";
 
-export enum ListType {
+export enum TvListType {
     TOP_RATED = 'top_rated',
     POPULAR = 'popular',
     ON_THE_AIR = 'on_the_air',
     AIRING_TODAY = 'airing_today'
 }
 
-export interface ListObject extends HasPosterPath {
+export interface TvListObject extends HasPosterPath {
     original_name: string;
     genre_ids: number[];
     name: string;
