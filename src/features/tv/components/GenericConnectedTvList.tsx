@@ -12,24 +12,26 @@ import {FetchTvType} from "../actions";
 
 interface Props {
     tvActions: FetchTvType,
-    tvListType: TvListType
+    tvListType: TvListType,
+    quantity?: number;
 }
 
 const GenericConnectedTvList: React.FC<Props> = (props) => {
-        const loading = useSelector<RootState, boolean>((state: any) => state.tv[props.tvListType].data.isLoading)
-        const tvList = useSelector<RootState, TvListObject[]>((state: any) => state.tv[props.tvListType].data.slice(0,7))
-        const dispatch = useDispatch()
+    const {quantity, tvListType} = props;
+    const loading = useSelector<RootState, boolean>((state: any) => state.tv[tvListType].data.isLoading)
+    const tvList = useSelector<RootState, TvListObject[]>((state: any) => state.tv[tvListType].data.slice(0,quantity ? quantity : 7))
+    const dispatch = useDispatch()
 
-        //Equivalent to componentDidMount
-        useEffect(() => {
-            if (isEmpty(tvList))
-                dispatch(props.tvActions.request())
-            // eslint-disable-next-line
-        }, [])
+    //Equivalent to componentDidMount
+    useEffect(() => {
+        if (isEmpty(tvList))
+            dispatch(props.tvActions.request())
+        // eslint-disable-next-line
+    }, [])
 
-        return (
-            loading ? <Spinner intent={"primary"} /> : <TvListComponent tvList={tvList} />
-        )
+    return (
+        loading ? <Spinner intent={"primary"} /> : <TvListComponent tvList={tvList} />
+    )
 }
 
 export {GenericConnectedTvList}
