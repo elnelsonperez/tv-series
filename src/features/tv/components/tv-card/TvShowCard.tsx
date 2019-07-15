@@ -7,7 +7,7 @@ import PosterImage from "../poster-image/PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
-import {useStoreSelector} from "../../../../shared/hooks/useStoreSelector";
+import {useStoreSelector} from "../../../../shared/hooks/use-store-selector";
 import {Genre} from "../../../genres/models";
 import {ListObject} from "../../models";
 
@@ -38,7 +38,7 @@ const TvCard: React.FC<Props> = props => {
             .filter(i => i !== null) as Genre[]
     }
 
-    if (config) {
+    if (config && config.images) {
         return <Card interactive={true} elevation={Elevation.ONE} onClick={handleClick}
               style={{width: widths[posterSize]}} >
             <div className={styles.cardBody}>

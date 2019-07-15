@@ -9,7 +9,7 @@ import Home from "./routes/Home";
 import TvDetails from "./routes/TvDetails";
 import {Provider, useDispatch} from "react-redux";
 import {ConfigContext} from "./shared/hooks/config-context";
-import {useStoreSelector} from "./shared/hooks/useStoreSelector";
+import {useStoreSelector} from "./shared/hooks/use-store-selector";
 import {fetchConfigurationAction} from "./features/configuration/actions";
 import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/actions";
 import {Configuration} from "./features/configuration/models";

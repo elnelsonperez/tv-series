@@ -22,9 +22,8 @@ const TopTvShowsComponent: React.FC = () => {
         // eslint-disable-next-line
     }, [])
 
-    const WrappedComponent = <TvListComponent tvList={tvShowsData} />;
     return (
-        loading ? <Spinner intent={"primary"} /> : WrappedComponent
+        loading ? <Spinner intent={"primary"} /> : <TvListComponent tvList={tvShowsData} />
     )
 }
 
