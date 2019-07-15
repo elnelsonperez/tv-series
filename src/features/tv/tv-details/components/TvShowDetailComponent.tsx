@@ -29,6 +29,7 @@ export const TvShowDetailsComponent: React.FC<Props> = (props) => {
                 <img src={config.images.base_url+'w300/'+ details.poster_path} alt={'Poster'}/>
                 <p>{details.overview}</p>
 
+
                 <h3>Seasons</h3>
                 <div style={{display: "flex"}}>
                     {
