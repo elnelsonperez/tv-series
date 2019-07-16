@@ -1,10 +1,10 @@
 import http from '../../../services/http-client'
 import {Observable} from 'rxjs'
 import {map} from 'rxjs/operators'
-import {DetailObject} from "../models";
+import {TvDetailObject} from "../models";
 
-export function loadTvShowDetails (id: string): Observable<DetailObject> {
-    return http.get<DetailObject>('tv/' + id ).pipe(
+export function fetchTvDetails (id: string): Observable<TvDetailObject> {
+    return http.get<TvDetailObject>('tv/' + id ).pipe(
         map(result => {
             return result.data;
         })

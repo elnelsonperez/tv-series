@@ -68,7 +68,7 @@ interface Season extends HasPosterPath {
     season_number: number;
 }
 
-export interface DetailObject extends HasPosterPath {
+export interface TvDetailObject extends HasPosterPath {
     backdrop_path: string;
     created_by: CreatedBy[];
     episode_run_time: number[];

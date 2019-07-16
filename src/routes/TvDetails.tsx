@@ -3,6 +3,8 @@ import Main from '../layouts/Main';
 import {TvShowDetailsComponent} from "../features/tv/tv-details/components/TvShowDetailComponent";
 import {match} from "react-router";
 
+import 'animate.css/animate.css'
+
 interface Props {
     match: match<{tvShowId: string}>
 }
