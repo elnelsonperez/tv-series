@@ -4,9 +4,10 @@
   align-items: center;
   .title {
     flex-wrap: wrap;
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
   }
   .image {
 
@@ -19,6 +20,9 @@
     > * {
       margin-top: 5px;
     }
+  }
+  .rating {
+    font-size: 0.95em;
   }
 }
 

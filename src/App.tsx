@@ -14,6 +14,8 @@ import {fetchConfigurationAction} from "./features/configuration/actions";
 import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/actions";
 import {Configuration} from "./features/configuration/models";
 
+import '@fortawesome/fontawesome-free/css/all.css'
+
 const AppWithConfig = () => {
 
     const dispatch = useDispatch()
