@@ -1,15 +1,16 @@
 import * as React from "react";
-import {Boundary, Card, Elevation, OverflowList, Tag} from "@blueprintjs/core";
+import {Card, Elevation} from "@blueprintjs/core";
 import {ConfigContext} from '../../../../shared/hooks/config-context';
 import {RouteComponentProps, withRouter} from "react-router";
 import {getPath} from "../../../../router-paths";
-import PosterImage from "../PosterImage";
+import PosterImage from "../../../../shared/components/PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
 import styles from './TvShowCard.module.scss'
 import {useContext} from "react";
 import {useStoreSelector} from "../../../../shared/hooks/use-store-selector";
 import {Genre} from "../../../genres/models";
 import {TvListObject} from "../../models";
+import GenreList from "../../../../shared/components/genre-list/GenreList";
 
 type Props = RouteComponentProps & {
     tvShow: TvListObject;
@@ -54,13 +55,7 @@ const TvCard: React.FC<Props> = props => {
                         <i style={{color: '#ff6c00'}} className={'fas fa-star'}/> :
                         <i style={{color: '#9c1d14'}} className={'fas fa-bomb'}/> }
                 </div>
-                <div className={styles.categories}>
-                    <OverflowList items={genres}
-                                  collapseFrom={Boundary.END}
-                                  visibleItemRenderer={g => <Tag key={g.id} style={{marginRight: 5}}>{g.name}</Tag>}
-                                  overflowRenderer={items => <Tag><span style={{fontWeight: 500}}>...</span></Tag>}
-                    />
-                </div>
+                <GenreList genres={genres} />
             </div>
         </Card>
     }

@@ -2,7 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import {fetchTvDetails} from "../api";
 import * as React from "react";
 import {ConfigContext} from "../../../../shared/hooks/config-context";
-import PosterImage from "../../components/PosterImage";
+import PosterImage from "../../../../shared/components/PosterImage";
 import {isEmpty} from 'lodash';
 import {TvDetailObject, TvListObject} from "../../models";
 import {fetchSimilarTv} from "../../tv-similar/api";

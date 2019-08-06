@@ -6,7 +6,6 @@ export function useObsRender<T>(obs: Observable<T>, defaultVal: T) {
     useEffect(() => {
         const subscription = obs.subscribe(setValue)
         return () => {
-            // console.log('Obs unssubscribe')
             subscription.unsubscribe();
         }
     }, [obs])

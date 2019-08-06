@@ -1,6 +1,6 @@
 import * as React from "react";
-import {PosterSizes} from "../../../shared/api/enums";
-import {HasPosterPath} from "../../../shared/models";
+import {PosterSizes} from "../api/enums";
+import {HasPosterPath} from "../models";
 
 type Props = {
     baseUrl: string;

@@ -15,6 +15,7 @@ import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/act
 import {Configuration} from "./features/configuration/models";
 
 import '@fortawesome/fontawesome-free/css/all.css'
+import TvShows from "./routes/TvShows";
 
 const AppWithConfig = () => {
 
@@ -30,6 +31,8 @@ const AppWithConfig = () => {
     return (
         <ConfigContext.Provider value={configuration}>
             <Route exact path={getPath('home')} render={Home} />
+            <Route exact path={getPath('tvShows')} render={TvShows} />
+            {/*<Route exact path={getPath('home')} render={Home} />*/}
             <Route exact
                    path={getPath('tvShowDetails', ':tvShowId')}
                    render={props => <TvDetails {...props}/>} />

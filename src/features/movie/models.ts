@@ -1,6 +1,6 @@
 import {HasPosterPath} from "../../shared/models";
 
-export interface ListObject extends HasPosterPath {
+export interface MovieListObject extends HasPosterPath {
     adult: boolean;
     overview: string;
     release_date: string;
@@ -15,4 +15,13 @@ export interface ListObject extends HasPosterPath {
     video: boolean;
     vote_average: number;
 }
+
+export enum MovieListType {
+    TOP_RATED = 'top_rated',
+    UPCOMING = 'upcoming',
+    NOW_PLAYING = 'now_playing',
+    POPULAR = 'popular',
+    LATEST = 'popular',
+}
+
 
