@@ -17,7 +17,7 @@ export const epicMiddleware = createEpicMiddleware<
   dependencies: services,
 });
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({basename: '/tv-series'});
 const middlewares = [routerMiddleware(history), epicMiddleware];
 const enhancer = composeWithDevTools(applyMiddleware(...middlewares));
 
