@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/tv-series/static/css/main.51ca4b5f.chunk.css",
+    "main.js": "/tv-series/static/js/main.bd273953.chunk.js",
+    "main.js.map": "/tv-series/static/js/main.bd273953.chunk.js.map",
+    "runtime~main.js": "/tv-series/static/js/runtime~main.466b3e8c.js",
+    "runtime~main.js.map": "/tv-series/static/js/runtime~main.466b3e8c.js.map",
+    "static/css/2.e599c9ff.chunk.css": "/tv-series/static/css/2.e599c9ff.chunk.css",
+    "static/js/2.a72c7d1e.chunk.js": "/tv-series/static/js/2.a72c7d1e.chunk.js",
+    "static/js/2.a72c7d1e.chunk.js.map": "/tv-series/static/js/2.a72c7d1e.chunk.js.map",
+    "index.html": "/tv-series/index.html",
+    "precache-manifest.a89b1ccc7c387466b404ed0ab0bba862.js": "/tv-series/precache-manifest.a89b1ccc7c387466b404ed0ab0bba862.js",
+    "service-worker.js": "/tv-series/service-worker.js",
+    "static/css/2.e599c9ff.chunk.css.map": "/tv-series/static/css/2.e599c9ff.chunk.css.map",
+    "static/css/main.51ca4b5f.chunk.css.map": "/tv-series/static/css/main.51ca4b5f.chunk.css.map",
+    "static/media/all.css": "/tv-series/static/media/fa-solid-900.ef3df984.eot",
+    "static/media/Main.scss": "/tv-series/static/media/icons-20.e666d692.eot"
+  }
+}
