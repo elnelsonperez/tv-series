@@ -41,6 +41,7 @@ const TvCard: React.FC<Props> = props => {
 
     if (config && config.images) {
         return <Card elevation={Elevation.TWO}
+                     interactive={true}
               style={{width: widths[posterSize]}} >
             <div className={styles.cardBody}>
                 <div className={styles.image} onClick={handleClick}>
