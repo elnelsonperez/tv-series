@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tv-series/static/css/main.51ca4b5f.chunk.css",
-    "main.js": "/tv-series/static/js/main.bd273953.chunk.js",
-    "main.js.map": "/tv-series/static/js/main.bd273953.chunk.js.map",
+    "main.js": "/tv-series/static/js/main.5bdabc25.chunk.js",
+    "main.js.map": "/tv-series/static/js/main.5bdabc25.chunk.js.map",
     "runtime~main.js": "/tv-series/static/js/runtime~main.466b3e8c.js",
     "runtime~main.js.map": "/tv-series/static/js/runtime~main.466b3e8c.js.map",
     "static/css/2.e599c9ff.chunk.css": "/tv-series/static/css/2.e599c9ff.chunk.css",
     "static/js/2.a72c7d1e.chunk.js": "/tv-series/static/js/2.a72c7d1e.chunk.js",
     "static/js/2.a72c7d1e.chunk.js.map": "/tv-series/static/js/2.a72c7d1e.chunk.js.map",
     "index.html": "/tv-series/index.html",
-    "precache-manifest.4b136e92eb22b2d6248ee1f7d8c71a96.js": "/tv-series/precache-manifest.4b136e92eb22b2d6248ee1f7d8c71a96.js",
+    "precache-manifest.ac1e905d9d335cb594bddfe304056063.js": "/tv-series/precache-manifest.ac1e905d9d335cb594bddfe304056063.js",
     "service-worker.js": "/tv-series/service-worker.js",
     "static/css/2.e599c9ff.chunk.css.map": "/tv-series/static/css/2.e599c9ff.chunk.css.map",
     "static/css/main.51ca4b5f.chunk.css.map": "/tv-series/static/css/main.51ca4b5f.chunk.css.map",
