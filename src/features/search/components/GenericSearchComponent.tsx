@@ -36,7 +36,7 @@ const GenericSearchComponent = <ResourceType extends {}>(props: PropsWithChildre
     return (
         <div className='search-wrapper'>
             <InputGroup leftIcon={'search'} placeholder='Type here to search' onInput={(e: ChangeEvent<HTMLInputElement>) => searchTextCallback(e.target.value)} />
-            {count > 0 && <div>
+            {count > 0 && <div style={{marginTop: 10, marginBottom: 10}}>
                 {count} Results
             </div>}
             {props.children(useObsRender(list$, []))}
@@ -46,27 +46,3 @@ const GenericSearchComponent = <ResourceType extends {}>(props: PropsWithChildre
 
 export default GenericSearchComponent
 export {GenericSearchComponent};
-
-// const [inputCallback, value] = useEventCallback(
-//     (event$: Observable<ChangeEvent<HTMLInputElement>>) =>
-//         event$.pipe(
-//             tap((e) => e.persist()),
-//             debounceTime(300),
-//             map(event => event.target.value)
-//         ),
-//     '1 empty'
-// )
-//
-// const [inputCallback2, value2] = useEventCallback(
-//     (event$: Observable<ChangeEvent<HTMLInputElement>>) =>
-//         event$.pipe(
-//             tap((e) => e.persist()),
-//             debounceTime(300),
-//             map(event => event.target.value)
-//         ),
-//     '2 empty'
-// )
-//
-// const testing = useObservable<string, [string, string]>((inputs$) => inputs$.pipe(
-//     map(([v1, v2]) => v1+v2)
-// ), 'Nothing', [value, value2])

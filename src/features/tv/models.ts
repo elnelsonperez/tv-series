@@ -1,4 +1,4 @@
-import {HasPosterPath} from "../../shared/models";
+import {HasPosterPath, ProductionCompany} from "../../shared/models";
 import {Genre} from "../genres/models";
 
 export enum TvListType {
@@ -49,13 +49,6 @@ interface Network {
     name: string;
     id: number;
     logo_path: string;
-    origin_country: string;
-}
-
-interface ProductionCompany {
-    id: number;
-    logo_path: string;
-    name: string;
     origin_country: string;
 }
 

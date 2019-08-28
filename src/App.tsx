@@ -6,7 +6,9 @@ import {getPath} from "./router-paths";
 
 //Routes
 import Home from "./routes/Home";
-import TvDetails from "./routes/TvDetails";
+import TvDetail from "./routes/TvDetail";
+import MovieDetail from "./routes/MovieDetail";
+
 import {Provider, useDispatch} from "react-redux";
 import {ConfigContext} from "./shared/hooks/config-context";
 import {useStoreSelector} from "./shared/hooks/use-store-selector";
@@ -15,7 +17,9 @@ import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/act
 import {Configuration} from "./features/configuration/models";
 
 import '@fortawesome/fontawesome-free/css/all.css'
+
 import TvShows from "./routes/TvShows";
+import Movies from "./routes/Movies";
 
 const AppWithConfig = () => {
 
@@ -32,10 +36,13 @@ const AppWithConfig = () => {
         <ConfigContext.Provider value={configuration}>
             <Route exact path={getPath('home')} render={Home} />
             <Route exact path={getPath('tvShows')} render={TvShows} />
-            {/*<Route exact path={getPath('home')} render={Home} />*/}
+            <Route exact path={getPath('movies')} render={Movies} />
             <Route exact
-                   path={getPath('tvShowDetails', ':tvShowId')}
-                   render={props => <TvDetails {...props}/>} />
+                   path={getPath('tvShowDetail', ':tvShowId')}
+                   render={props => <TvDetail {...props}/>} />
+                   <Route exact
+                   path={getPath('movieDetail', ':movieId')}
+                   render={props => <MovieDetail {...props}/>} />
         </ConfigContext.Provider>
     )
 }

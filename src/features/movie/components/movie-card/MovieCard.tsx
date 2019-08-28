@@ -5,15 +5,15 @@ import {RouteComponentProps, withRouter} from "react-router";
 import {getPath} from "../../../../router-paths";
 import PosterImage from "../../../../shared/components/PosterImage";
 import {PosterSizes} from "../../../../shared/api/enums";
-import styles from './TvShowCard.module.scss'
+import styles from './MovieCard.module.scss'
 import {useContext} from "react";
 import {useStoreSelector} from "../../../../shared/hooks/use-store-selector";
 import {Genre} from "../../../genres/models";
-import {TvListObject} from "../../models";
 import GenreList from "../../../../shared/components/genre-list/GenreList";
+import {MovieListObject} from "../../models";
 
 type Props = RouteComponentProps & {
-    tvShow: TvListObject;
+    movie: MovieListObject;
     posterSize: PosterSizes
 }
 
@@ -22,11 +22,11 @@ const widths: { [key in PosterSizes]?: number } = {
     [PosterSizes.MEDIUM]: 340
 }
 
-const TvCard: React.FC<Props> = props => {
-    const {tvShow, posterSize} = props
+const MovieCard: React.FC<Props> = props => {
+    const {movie, posterSize} = props
 
     const handleClick = () => {
-        props.history.push(getPath('tvShowDetail', tvShow.id.toString()))
+        props.history.push(getPath('movieDetail', movie.id.toString()))
     }
 
     const config = useContext(ConfigContext);
@@ -34,7 +34,7 @@ const TvCard: React.FC<Props> = props => {
 
     let genres: Genre[] = [];
     if (genresById) {
-        genres = tvShow.genre_ids
+        genres = movie.genre_ids
             .map(id => genresById[id] ? genresById[id] : null)
             .filter(i => i !== null) as Genre[]
     }
@@ -44,14 +44,14 @@ const TvCard: React.FC<Props> = props => {
               style={{width: widths[posterSize]}} >
             <div className={styles.cardBody}>
                 <div className={styles.image} onClick={handleClick}>
-                    <PosterImage size={posterSize} entityWithPoster={tvShow} baseUrl={config.images.base_url}/>
+                    <PosterImage size={posterSize} entityWithPoster={movie} baseUrl={config.images.base_url}/>
                 </div>
                 <div className={styles.title}>
-                    <b>{tvShow.name}</b>
+                    <b>{movie.title}</b>
                 </div>
                 <div className={styles.rating}>
-                   <b>{tvShow.vote_average * 10}%</b> &nbsp;
-                    {tvShow.vote_average > 6.5 ?
+                   <b>{movie.vote_average * 10}%</b> &nbsp;
+                    {movie.vote_average > 6.5 ?
                         <i style={{color: '#ff6c00'}} className={'fas fa-star'}/> :
                         <i style={{color: '#9c1d14'}} className={'fas fa-bomb'}/> }
                 </div>
@@ -62,5 +62,5 @@ const TvCard: React.FC<Props> = props => {
     return null;
 }
 
-const TvShowCardWithRouter = withRouter(TvCard);
-export {TvShowCardWithRouter as TvShowCard}
+const MovieCardWithRouter = withRouter(MovieCard);
+export {MovieCardWithRouter as MovieCard}

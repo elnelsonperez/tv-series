@@ -1,15 +1,16 @@
+import * as React from "react";
 import {useContext, useEffect, useState} from "react";
 import {fetchTvDetails} from "../api";
-import * as React from "react";
 import {ConfigContext} from "../../../../shared/hooks/config-context";
 import PosterImage from "../../../../shared/components/PosterImage";
 import {isEmpty} from 'lodash';
 import {TvDetailObject, TvListObject} from "../../models";
 import {fetchSimilarTv} from "../../tv-similar/api";
 import {TvListComponent} from "../../tv-list/components/tv-list-component/TvListComponent";
-import {tap, finalize} from 'rxjs/operators'
+import {finalize, tap} from 'rxjs/operators'
 import {Spinner} from "@blueprintjs/core";
 import {Animated} from "react-animated-css";
+import {PosterSizes} from "../../../../shared/api/enums";
 
 interface Props {
     tvShowId: string;
@@ -34,8 +35,6 @@ export const TvShowDetailsComponent: React.FC<Props> = (props) => {
             tap(() => setLoadignSimilar(true)),
             finalize(() => setLoadignSimilar(false))
         ).subscribe(setSimilar)
-
-        // eslint-disable-next-line
     } , [tvShowId])
 
     const config = useContext(ConfigContext);
@@ -45,7 +44,7 @@ export const TvShowDetailsComponent: React.FC<Props> = (props) => {
         detailRender = loadingDetails ?  <Spinner intent={"primary"} /> : <Animated animationIn={'fadeIn'} animationOut={'fadeOut'} isVisible={!loadingDetails}>
             <div>
                 <h3>{details.name}</h3>
-                <img src={config.images.base_url+'w300/'+ details.poster_path} alt={'Poster'}/>
+                <PosterImage entityWithPoster={details} baseUrl={config.images.base_url} size={PosterSizes.MEDIUM}/>
                 <p>{details.overview}</p>
                 <h3>Seasons</h3>
                 <div style={{display: "flex"}}>

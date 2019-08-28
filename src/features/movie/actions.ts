@@ -21,12 +21,6 @@ export const fetchUpcomingMoviesAction = createAsyncAction(
     `[Upcoming Movies] Request Failure`
 )<undefined, MovieListObject[], AxiosResponse<ApiError>>();
 
-export const fetchLatestMoviesAction = createAsyncAction(
-    `[Latest Movies] Request`,
-    `[Latest Movies] Request Success`,
-    `[Latest Movies] Request Failure`
-)<undefined, MovieListObject[], AxiosResponse<ApiError>>();
-
 export const fetchPopularMoviesAction = createAsyncAction(
     `[Popular Movies] Request`,
     `[Popular Movies] Request Success`,
@@ -34,5 +28,5 @@ export const fetchPopularMoviesAction = createAsyncAction(
 )<undefined, MovieListObject[], AxiosResponse<ApiError>>();
 
 
-export type FetchMoviesType = typeof fetchLatestMoviesAction | typeof fetchUpcomingMoviesAction
+export type FetchMoviesType = typeof fetchUpcomingMoviesAction
     | typeof fetchTopRatedMoviesAction | typeof fetchNowPlayingMoviesAction | typeof fetchPopularMoviesAction;

@@ -1,0 +1,10 @@
+.item {
+  margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -8,11 +8,11 @@ import 'animate.css/animate.css'
 interface Props {
     match: match<{tvShowId: string}>
 }
- const TvDetails: React.FC<Props> = (props) => (
+ const TvDetail: React.FC<Props> = (props) => (
     <Main>
-        <h1>Details Route</h1>
+        <h1>Tv Show Details</h1>
         <TvShowDetailsComponent tvShowId={props.match.params.tvShowId} />
     </Main>
 );
 
-export default TvDetails;
+export default TvDetail;

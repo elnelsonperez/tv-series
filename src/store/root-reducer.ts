@@ -8,6 +8,9 @@ import tvAiring from '../features/tv/tv-on-air/reducer';
 import tvOnAir from '../features/tv/tv-airing/reducer';
 
 import moviesPopular from '../features/movie/movie-popular/reducer';
+import moviesTopRated from '../features/movie/movie-top-rated/reducer';
+import moviesNowPlaying from '../features/movie/movie-now-playing/reducer';
+import moviesUpcoming from '../features/movie/movie-upcoming/reducer';
 
 import configuration from '../features/configuration/reducer';
 import genres from '../features/genres/reducer';
@@ -25,7 +28,10 @@ const rootReducer = (history: History<any>) => {
             [TvListType.AIRING_TODAY]: tvAiring,
         }),
         movies: combineReducers({
-            [MovieListType.POPULAR]: moviesPopular
+            [MovieListType.POPULAR]: moviesPopular,
+            [MovieListType.TOP_RATED]: moviesTopRated,
+            [MovieListType.UPCOMING]: moviesUpcoming,
+            [MovieListType.NOW_PLAYING]: moviesNowPlaying,
         }),
         genres,
     })

@@ -2,8 +2,8 @@ const pathsMap = {
   home: () => '/',
   tvShows: () => `/tv`,
   movies: () => `/movies`,
-  tvShowDetails: (tvShowId: string) => `/tv/${tvShowId}`,
-  movieDetails: (movieId: string) => `/movies/${movieId}`,
+  tvShowDetail: (tvShowId: string) => `/tv/${tvShowId}`,
+  movieDetail: (movieId: string) => `/movies/${movieId}`,
 };
 type PathsMap = typeof pathsMap;
 
