@@ -5,6 +5,7 @@ A project built using Create React App and [The Movie DB](https://www.themoviedb
 - React Hooks (Built in and custom)
 - Redux
 - [redux-observable](https://redux-observable.js.org/)
+- Rxjs
 
 My aim was to avoid using `any` in Typescript and to apply good practices in the React ecosystem. 
 
