@@ -5,8 +5,9 @@ A project built using Create React App and [The Movie DB](https://www.themoviedb
 - React Hooks (Built in and custom)
 - Redux
 - [redux-observable](https://redux-observable.js.org/)
-- Rxjs
+- RxJs
 
+**The UI is simple and is not the focus of the project.**
 My aim was to avoid using `any` in Typescript and to apply good practices in the React ecosystem. 
 
 #### [See it Live](https://elnelsonperez.github.io/tv-series/)
