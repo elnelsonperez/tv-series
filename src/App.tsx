@@ -4,22 +4,24 @@ import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router';
 import {getPath} from "./router-paths";
 
+import '@fortawesome/fontawesome-free/css/all.css'
+
 //Routes
 import Home from "./routes/Home";
+import TvShows from "./routes/TvShows";
+import Movies from "./routes/Movies";
 import TvDetail from "./routes/TvDetail";
 import MovieDetail from "./routes/MovieDetail";
 
 import {Provider, useDispatch} from "react-redux";
-import {ConfigContext} from "./shared/hooks/config-context";
+
 import {useStoreSelector} from "./shared/hooks/use-store-selector";
+
+import {Configuration} from "./features/configuration/models";
+import {ConfigContext} from "./shared/hooks/config-context";
+
 import {fetchConfigurationAction} from "./features/configuration/actions";
 import {fetchMovieGenresAction, fetchTvGenresAction} from "./features/genres/actions";
-import {Configuration} from "./features/configuration/models";
-
-import '@fortawesome/fontawesome-free/css/all.css'
-
-import TvShows from "./routes/TvShows";
-import Movies from "./routes/Movies";
 
 const AppWithConfig = () => {
 
@@ -40,7 +42,7 @@ const AppWithConfig = () => {
             <Route exact
                    path={getPath('tvShowDetail', ':tvShowId')}
                    render={props => <TvDetail {...props}/>} />
-                   <Route exact
+            <Route exact
                    path={getPath('movieDetail', ':movieId')}
                    render={props => <MovieDetail {...props}/>} />
         </ConfigContext.Provider>
