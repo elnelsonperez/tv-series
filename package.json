@@ -18,7 +18,7 @@
     "axios-observable": "^1.1.0",
     "connected-react-router": "^6.4.0",
     "gh-pages": "^2.1.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
