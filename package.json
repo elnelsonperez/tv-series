@@ -14,7 +14,7 @@
     "@types/react-redux": "^7.1.1",
     "@types/react-router-dom": "^4.3.3",
     "animate.css": "^3.7.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "axios-observable": "^1.1.0",
     "connected-react-router": "^6.4.0",
     "gh-pages": "^2.1.1",
