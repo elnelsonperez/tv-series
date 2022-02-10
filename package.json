@@ -19,7 +19,7 @@
     "connected-react-router": "^6.4.0",
     "gh-pages": "^2.1.1",
     "lodash": "^4.17.21",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-animated-css": "^1.2.1",
